@@ -1,0 +1,90 @@
+.education__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em;
+}
+
+.education__item {
+  padding: 1.5em;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  border-radius: 10px;
+  background-color: var(--clr-bg-alt);
+}
+
+.education__item:hover {
+  transform: translateY(-7px);
+}
+
+.education__degree {
+  margin-bottom: 0.5em;
+  color: var(--header-blue);
+  white-space: pre-line;
+}
+
+.education__school {
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+.education__location, .education__date {
+  font-size: 0.9em;
+  color: var(--clr-fg-alt);
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+.education__icon {
+  margin-right: 0.5em;
+  flex-shrink: 0;
+}
+
+.education__description-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1em;
+}
+
+.education__description {
+  flex: 1;
+  font-size: 0.9em;
+  margin-right: 1em;
+}
+
+.education__crest {
+  flex: 0 0 70px;
+}
+
+.education__crest img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 70px;
+}
+
+/* Dark mode styles */
+.dark .education__item {
+  background-color: var(--clr-bg-light);
+  color: var(--clr-fg-light);
+}
+
+.dark .education__degree {
+  color: var(--clr-primary-light);
+}
+
+.dark .education__location,
+.dark .education__date,
+.dark .education__description {
+  color: var(--clr-fg-alt-light);
+}
+
+.dark .education__school {
+  color: var(--clr-fg-light);
+}

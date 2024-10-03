@@ -1,0 +1,61 @@
+.experience__grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+}
+
+.experience__item {
+  padding: 2em;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  background-color: var(--clr-dark-blue);
+  border-radius: 10px;
+  border: 1px solid var(--clr-bg-border);
+}
+
+.experience__item:hover {
+  transform: translateY(-7px);
+}
+
+.experience__title {
+  color: var(--clr-primary);
+  margin-bottom: 0.5em;
+}
+
+.experience__company {
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+.experience__location, .experience__date {
+  font-size: 0.9em;
+  color: var(--clr-fg-alt);
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+.experience__description {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+.experience__icon {
+  vertical-align: middle;
+  margin-right: 8px;
+  flex-shrink: 0;
+  font-size: 1.2em;
+  position: relative;
+  top: -2px;
+}
+
+.experience-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--clr-fg-alt);
+  margin: 1em 0;
+}

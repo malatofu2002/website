@@ -1,0 +1,26 @@
+.my-story__toc {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2em;
+}
+
+.my-story__toc li {
+    margin: 0.5em 0;
+}
+
+.my-story__toc a {
+    color: var(--clr-fg);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.my-story__toc a:hover {
+    text-decoration: underline;
+}
+
+.my-research__icon {
+    margin-right: 0.5em;
+    font-size: 1.5em;
+    color: var(--clr-primary);
+    transform:translateY(0.2em);
+}

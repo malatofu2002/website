@@ -1,0 +1,115 @@
+.my-story {
+    padding: 2em 1.5em;
+    background-color: var(--clr-bg);
+}
+
+.my-story__title {
+    text-align: center; /* Center the main title */
+    margin-bottom: 1.5em;
+    font-size: 2.5em;
+    color: var(--clr-fg);
+    text-transform: uppercase; /* Capitalize the main title */
+}
+
+.my-story__subtitle {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: var(--clr-primary);
+    text-align: center; /* Center the subtitles */
+    text-transform: uppercase; /* Capitalize the subtitles */
+}
+
+.my-story__section {
+    margin-bottom: 2em;
+}
+
+.my-story__section p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: var(--clr-fg);
+    text-align: left; /* Ensure left alignment of text */
+}
+
+.my-story__image-container {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.my-story__image {
+    width: 400px; /* Default width for larger screens */
+    height: auto;
+    margin: 0 2em 1em 0; /* Increase right margin for better spacing */
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    float: left; /* Allows text to wrap around the image */
+}
+
+.my-story__image--right {
+    float: right; /* Align the image to the right */
+    margin-left: 1em; /* Add margin to the left for spacing */
+    margin-bottom: 1em; /* Add margin to the bottom for spacing */
+}
+
+/* Clearfix for floating elements */
+.my-story__image-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.my-story__icon {
+    margin-right: 0.5em; /* Space between icon and text */
+    font-size: 1.5em; /* Adjust icon size if needed */
+    color: var(--clr-primary); /* Keep the icon color consistent */
+    margin-bottom: 0.5em;
+}
+
+.my-story__subtitle-container {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the subtitle horizontally */
+}
+  
+.my-story__read-more {
+display: flex;
+justify-content: center;
+margin-top: 1.5em;
+}
+
+.bold-link a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+.bold-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 1100px) {
+    .my-story__subtitle {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+        margin-bottom: 0.3em; /* Reduce margin for better spacing */
+    }
+
+    .my-story__image {
+        float: none; /* Disable floating on smaller screens */
+        display: block;
+        margin: 0 auto 1em auto; /* Center the image */
+        width: 90%; /* Scale the image to 90% of the container */
+        max-width: 400px; /* Set a max width to prevent it from growing too large */
+        height: auto; /* Keep the aspect ratio intact */
+        transition: width 0.3s ease-in-out; /* Smooth scaling effect */
+    }
+
+    .my-story__section p {
+        text-align: left; /* Keep the text left-aligned */
+    }
+
+    .my-story__subtitle-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+    }
+    
+}

@@ -1,0 +1,52 @@
+/* Regular desktop view (above 600px) */
+.nav__list {
+  margin-right: 1.5em;
+  display: flex;
+}
+
+.nav__list-item {
+  margin-left: 1.5em;
+}
+
+.app .nav__hamburger {
+  display: none; /* Hidden when not in mobile view */
+}
+
+.nav__theme {
+  margin-top: 0.4em;
+}
+
+/* Mobile view (narrow, max-width: 600px) */
+@media (max-width: 600px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    font-size: 1.5em;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Smooth slide and background color transition */
+    background-color: transparent; /* Start with a transparent background */
+  }
+
+  .nav__list.nav__list--active {
+    transform: translateX(0); /* Slide the menu into view */
+    background-color: var(--clr-bg); /* Set the background color when active */
+  }
+
+  .nav__list-item {
+    margin: 0.5em 0;
+  }
+
+  /* Show the hamburger icon in narrow view */
+  .app .nav__hamburger {
+    display: flex;
+    z-index: 3;
+    margin-left: 0.8em;
+  }
+}
