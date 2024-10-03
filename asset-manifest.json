@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b9203c8d.chunk.css",
+    "main.js": "/static/js/main.f0b1b271.chunk.js",
+    "main.js.map": "/static/js/main.f0b1b271.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e2d63a0c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e2d63a0c.js.map",
+    "static/js/2.5c04383b.chunk.js": "/static/js/2.5c04383b.chunk.js",
+    "static/js/2.5c04383b.chunk.js.map": "/static/js/2.5c04383b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b9203c8d.chunk.css.map": "/static/css/main.b9203c8d.chunk.css.map",
+    "static/js/2.5c04383b.chunk.js.LICENSE.txt": "/static/js/2.5c04383b.chunk.js.LICENSE.txt",
+    "static/media/childhood.9760359f.jpg": "/static/media/childhood.9760359f.jpg",
+    "static/media/denmark.984d2dc0.png": "/static/media/denmark.984d2dc0.png",
+    "static/media/myCV.7ec2238e.pdf": "/static/media/myCV.7ec2238e.pdf",
+    "static/media/oxford.191cf3b5.jpg": "/static/media/oxford.191cf3b5.jpg",
+    "static/media/pate.a5286e37.jpg": "/static/media/pate.a5286e37.jpg",
+    "static/media/profile.a587b9e5.jpg": "/static/media/profile.a587b9e5.jpg",
+    "static/media/sen.ff3b212f.jpg": "/static/media/sen.ff3b212f.jpg",
+    "static/media/university.d6f505a9.jpg": "/static/media/university.d6f505a9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2d63a0c.js",
+    "static/js/2.5c04383b.chunk.js",
+    "static/css/main.b9203c8d.chunk.css",
+    "static/js/main.f0b1b271.chunk.js"
+  ]
+}
