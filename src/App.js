@@ -9,6 +9,9 @@ import HomePage from './pages/HomePage/HomePage'
 import BackgroundShapes from './components/BackgroundShapes'
 import MyStory from './pages/MyStory/MyStory'
 import MyResearch from './pages/Research/Research'
+import Materials from './pages/Materials/Materials'
+import Podcasts from './pages/Materials/Podcasts'
+import Interventions from './pages/Materials/Interventions'
 
 function ScrollManager() {
   const location = useLocation()
@@ -54,6 +57,9 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<MyStory />} />
                 <Route path="/experience" element={<MyResearch />} />
+                <Route path="/materials" element={<Materials />} />
+                <Route path="/materials/podcasts" element={<Podcasts />} />
+                <Route path="/materials/interventions" element={<Interventions />} />
               </Routes>
             </main>
             <Footer />

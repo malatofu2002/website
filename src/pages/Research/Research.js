@@ -14,20 +14,19 @@ import senImage from './imgs/sen.jpg';
 
 const MyResearch = () => (
     <div className="my-story">
+        <FadeInSection>
         <h1 className="my-story__title">Research and Educational Experience</h1>
-
-        {/* Table of Contents */}
-        <section className="my-story__section">
-            <h2 className="my-story__subtitle">Contents Overview</h2>
-            <ul className="my-story__toc">
-                <li><SchoolIcon className="my-research__icon" /> <a href="#activities">Current Activities and Achievements</a></li>
-                <li><BookIcon className="my-research__icon" /> <a href="#background">Educational Background and Experience</a></li>
-                <li><LightBulbIcon className="my-research__icon" /> <a href="#collaboration">Research Collaboration with Prof. Padraic Monaghan</a></li>
-                <li><CaseStudyIcon className="my-research__icon" /> <a href="#case-study">Applying Psychology to my Work</a></li>
-                <li><AccountBalanceIcon className="my-research__icon" /> <a href="#aspirations">Future Goals and Aspirations</a></li>
-            </ul>
-        </section>
-
+            <section className="my-story__section">
+                <h2 className="my-story__subtitle">Contents Overview</h2>
+                <ul className="my-story__toc">
+                    <li><SchoolIcon className="my-research__icon" /> <a href="#activities">Current Activities and Achievements</a></li>
+                    <li><BookIcon className="my-research__icon" /> <a href="#background">Educational Background and Experience</a></li>
+                    <li><LightBulbIcon className="my-research__icon" /> <a href="#collaboration">Research Collaboration with Prof. Padraic Monaghan</a></li>
+                    <li><CaseStudyIcon className="my-research__icon" /> <a href="#case-study">Applying Psychology to my Work</a></li>
+                    <li><AccountBalanceIcon className="my-research__icon" /> <a href="#aspirations">Future Goals and Aspirations</a></li>
+                </ul>
+            </section>
+        </FadeInSection>
         {/* Section 1: Current Activities */}
         <FadeInSection>
             <section id="activities" className="my-story__section">

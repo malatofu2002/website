@@ -1,0 +1,238 @@
+.podcasts {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.podcasts__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--clr-fg);
+    text-transform: uppercase; /* Capitalize the main title */
+}
+
+.podcasts__intro, .podcasts__pdf {
+    margin-bottom: 2rem;
+}
+
+.podcasts__intro p {
+    margin-bottom: 1rem; /* Adds space after each paragraph */
+}
+
+.podcasts__intro p:last-child {
+    margin-bottom: 2rem; /* Adds extra space after the last paragraph */
+}
+
+.expandable-section {
+    margin-bottom: 1rem;
+    /* Remove the border */
+    border-radius: 5px;
+}
+
+.expandable-section__title {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-bg-alt);
+    color: var(--clr-fg);
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    /* Add border-radius to the title for rounded corners */
+    border-radius: 5px;
+}
+
+.expandable-section__icon {
+    transition: transform 0.3s ease;
+}
+
+.expandable-section__icon.expanded {
+    transform: rotate(180deg);
+}
+
+.expandable-section__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+.expandable-section__content.expanded {
+    max-height: 2000px; /* Adjust this value based on your content */
+    padding: 1rem;
+    transition: max-height 0.5s ease-in, padding 0.3s ease;
+}
+
+.expandable-section__content.transitioning {
+    max-height: 0;
+    padding: 0 1rem;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.btn--outline {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn--outline:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+}
+
+.podcast-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    padding-bottom: 20px; /* Default padding when not expanded */
+    background-color: var(--clr-dark-blue);
+    border: 1px solid transparent;
+    border-color: var(--clr-primary);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: padding-bottom 0.3s ease; /* Add transition for smooth padding change */
+}
+
+.podcast-item.expanded {
+    padding-bottom: 40px; /* Padding when expanded */
+}
+
+.podcast-item__name {
+    font-size: 2.2rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+}
+
+.podcast-item__subname {
+    font-size: 1.2rem;
+    color: var(--clr-fg-alt);
+    margin-bottom: 0.5rem;
+}
+
+.podcast-item__host,
+.podcast-item__description,
+.podcast-item__what-it-covers,
+.podcast-item__how-it-helped,
+.podcast-item__highlights {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.podcast-item__what-it-covers h4,
+.podcast-item__how-it-helped h4,
+.podcast-item__highlights h4 {
+    font-size: 1.1rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.5rem;
+}
+
+.podcast-item__what-it-covers ul,
+.podcast-item__how-it-helped ul,
+.podcast-item__highlights ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.podcast-item__what-it-covers li,
+.podcast-item__how-it-helped li,
+.podcast-item__highlights li {
+    margin-bottom: 0.5rem;
+}
+
+.podcast-item__access {
+    font-size: 0.9rem;
+    color: var(--clr-fg-alt);
+    border-top: 1px solid var(--clr-bg);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.podcast-item__content {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    position: relative;  /* Add this for positioning the gradient */
+}
+
+.podcast-item__content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-dark-blue) 70%); /* Light mode */
+    pointer-events: none;
+}
+
+.light .podcast-item__content::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-bg) 70%); /* Dark mode */
+}
+
+.podcast-item__content.expanded::after {
+    display: none;  /* Remove the gradient when expanded */
+}
+
+.podcast-item__expand-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 10px;
+    z-index: 1;  /* Ensure the button is above the gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast-item__expand-icon {
+    transition: transform 0.3s ease;
+    width: 20px;  /* Adjust this to make the chevron wider */
+    height: 20px;  /* Adjust this to control the chevron's height */
+    color: var(--clr-fg);  /* Use your text color variable here */
+}
+
+.podcast-item__expand-icon.expanded {
+    transform: rotate(180deg);
+}
+
+.podcasts__section-title {
+    font-size: 2rem;
+    color: var(--clr-primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.podcasts__top-picks-intro {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--clr-fg);
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-border); /* Add a border at the bottom */
+}
+
+.podcast-point {
+    margin-bottom: 1.5rem; /* Adjust this value to control the space below each point */
+}
+
+.button-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

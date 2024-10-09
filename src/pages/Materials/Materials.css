@@ -1,0 +1,87 @@
+.materials {
+    padding: 2em 1.5em;
+    background-color: var(--clr-bg);
+}
+
+.materials__title {
+    text-align: center; /* Center the main title */
+    margin-bottom: 1.5em;
+    font-size: 2.5em;
+    color: var(--clr-fg);
+    text-transform: uppercase; /* Capitalize the main title */
+}
+
+.materials__section {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.materials__section p {
+    margin-bottom: 1.5rem;
+    color: var(--clr-fg);
+}
+
+.materials__footer {
+    margin-top: 2em;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.materials__footer p {
+    margin-bottom: 1.5rem;
+    color: var(--clr-fg);
+}
+
+/* Add a subtle fade-in animation for the FadeInSection component */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.materials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.materials__item {
+    background-color: var(--clr-bg-alt);
+    border: 1px solid transparent;
+    border-color: var(--clr-primary);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.materials__item h2 {
+    color: var(--clr-primary);
+    margin-bottom: 15px;
+}
+
+.materials__item p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.materials__item .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.materials__item .btn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+}

@@ -13,9 +13,8 @@ import FadeInSection from '../../components/FadeInSection';
 
 const MyStory = () => (
     <div className="my-story">
-        <h1 className="my-story__title">A Little About Me</h1>
-        
         <FadeInSection>
+            <h1 className="my-story__title">A Little About Me</h1>
             <section className="my-story__section">
                 <div className="my-story__subtitle-container">
                     <LightBulbIcon className="my-story__icon" style={{ fontSize: '1.8em' }}/>

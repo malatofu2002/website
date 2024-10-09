@@ -50,6 +50,12 @@ const Navbar = () => {
           </Link>
         </li>
 
+        <li className='nav__list-item'>
+          <Link to="/materials" onClick={toggleNavList} className='link link--nav'>
+            Materials
+          </Link>
+        </li>
+
         {contact.email && (
           <li className='nav__list-item'>
             <a
