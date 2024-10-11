@@ -62,7 +62,7 @@
 }
 
 .expandable-section__content.expanded {
-    max-height: 2000px; /* Adjust this value based on your content */
+    max-height: 3000px; /* Adjust this value based on your content */
     padding: 1rem;
     transition: max-height 0.5s ease-in, padding 0.3s ease;
 }
@@ -90,31 +90,40 @@
 .podcast-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    padding-bottom: 20px; /* Default padding when not expanded */
     background-color: var(--clr-dark-blue);
-    border: 1px solid transparent;
-    border-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
-    transition: padding-bottom 0.3s ease; /* Add transition for smooth padding change */
+    overflow: visible;
 }
 
 .podcast-item.expanded {
-    padding-bottom: 40px; /* Padding when expanded */
+    padding-bottom: 40px;
+}
+
+.podcast-item__logo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    float: right;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .podcast-item__name {
     font-size: 2.2rem;
     color: var(--clr-primary);
     margin-bottom: 0.5rem;
+    clear: none;
 }
 
 .podcast-item__subname {
     font-size: 1.2rem;
     color: var(--clr-fg-alt);
     margin-bottom: 0.5rem;
+    clear: none;
 }
 
 .podcast-item__host,
@@ -125,6 +134,7 @@
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 1rem;
+    clear: none;
 }
 
 .podcast-item__what-it-covers h4,
@@ -160,8 +170,13 @@
 .podcast-item__content {
     max-height: 200px;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    position: relative;  /* Add this for positioning the gradient */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    position: relative;
+}
+
+.podcast-item__content.expanded {
+    max-height: none;
+    overflow: visible;
 }
 
 .podcast-item__content::after {
@@ -171,16 +186,18 @@
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-dark-blue) 70%); /* Light mode */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-dark-blue) 70%);
     pointer-events: none;
-}
-
-.light .podcast-item__content::after {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-bg) 70%); /* Dark mode */
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
 }
 
 .podcast-item__content.expanded::after {
-    display: none;  /* Remove the gradient when expanded */
+    opacity: 0;
+}
+
+.light .podcast-item__content::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--clr-bg) 70%);
 }
 
 .podcast-item__expand-button {
@@ -193,7 +210,7 @@
     border: none;
     cursor: pointer;
     padding-bottom: 10px;
-    z-index: 1;  /* Ensure the button is above the gradient */
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,9 +218,9 @@
 
 .podcast-item__expand-icon {
     transition: transform 0.3s ease;
-    width: 20px;  /* Adjust this to make the chevron wider */
-    height: 20px;  /* Adjust this to control the chevron's height */
-    color: var(--clr-fg);  /* Use your text color variable here */
+    width: 20px;
+    height: 20px;
+    color: var(--clr-fg);
 }
 
 .podcast-item__expand-icon.expanded {
@@ -223,16 +240,16 @@
     color: var(--clr-fg);
     font-size: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--clr-border); /* Add a border at the bottom */
+    border-bottom: 1px solid var(--clr-border);
 }
 
 .podcast-point {
-    margin-bottom: 1.5rem; /* Adjust this value to control the space below each point */
+    margin-bottom: 1.5rem;
 }
 
 .button-container {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }

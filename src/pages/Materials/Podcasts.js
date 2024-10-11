@@ -4,7 +4,19 @@ import FadeInSection from '../../components/FadeInSection';
 import materialPDF from "../../pages/assets/Educational Psychology Podcast Recommendations MLiu 2024.pdf"
 import podcastsData from '../../data/podcastsData.json';
 
-const PodcastItem = ({ item, isExpanded, onToggle, isTransitioning }) => {
+// Import podcast images
+import conversationsOnConsultationImage from './imgs/conversations-on-consultation.jpg';
+import psychBitesImage from './imgs/pyschbites.webp';
+import researchForTheRealWorldImage from './imgs/ucl-research.jpg';
+
+// Array of podcast images
+const podcastImages = [
+    conversationsOnConsultationImage,
+    psychBitesImage,
+    researchForTheRealWorldImage
+];
+
+const PodcastItem = ({ item, isExpanded, onToggle, isTransitioning, imageUrl }) => {
     const contentRef = useRef(null);
     const [showExpandButton, setShowExpandButton] = useState(false);
 
@@ -18,7 +30,7 @@ const PodcastItem = ({ item, isExpanded, onToggle, isTransitioning }) => {
         <div className={`podcast-item ${isExpanded ? 'expanded' : ''}`}>
             <h3 className="podcast-item__name">{item.name}</h3>
             {item.subName && <h4 className="podcast-item__subname">{item.subName}</h4>}
-            {item.host && ( // Conditional rendering for host
+            {item.host && (
                 <p className="podcast-item__host">
                     <strong>Host:</strong> {item.host}
                 </p>
@@ -28,7 +40,16 @@ const PodcastItem = ({ item, isExpanded, onToggle, isTransitioning }) => {
                 className={`podcast-item__content ${isExpanded ? 'expanded' : ''} ${isTransitioning ? 'transitioning' : ''}`}
                 style={isExpanded ? { maxHeight: `${contentRef.current?.scrollHeight}px` } : {}}
             >
-                <p className="podcast-item__description">{item.description}</p>
+                <div className="podcast-item__description-container">
+                    {imageUrl && (
+                        <img 
+                            src={imageUrl} 
+                            alt={`${item.name} logo`} 
+                            className="podcast-item__logo"
+                        />
+                    )}
+                    <p className="podcast-item__description">{item.description}</p>
+                </div>
                 {item.howItHelped && (
                     <div className="podcast-item__how-it-helped">
                         <h4>How It Helped:</h4>
@@ -149,6 +170,7 @@ const Podcasts = () => {
                         isExpanded={expandedIndex === index}
                         onToggle={() => handleToggle(index)}
                         isTransitioning={isTransitioning}
+                        imageUrl={podcastImages[index]} // Pass the image URL
                     />
                 </FadeInSection>
             ))}

@@ -22,5 +22,21 @@
     margin-right: 0.5em;
     font-size: 1.5em;
     color: var(--clr-primary);
-    transform:translateY(0.2em);
+    transform: translateY(0.2em);
+}
+
+.rectangular-image-container {
+    background-color: white;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    overflow: hidden; /* This ensures the image doesn't overflow the rounded corners */
+}
+
+.rectangular-image-container img {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    border-radius: 4px;
 }

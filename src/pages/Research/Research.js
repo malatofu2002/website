@@ -11,6 +11,7 @@ import FadeInSection from '../../components/FadeInSection';
 
 import oxfordImage from './imgs/oxford.jpg';
 import senImage from './imgs/sen.jpg';
+import steppingStonesImage from './imgs/stepping-stones.png';
 
 const MyResearch = () => (
     <div className="my-story">
@@ -54,9 +55,11 @@ const MyResearch = () => (
             <section id="background" className="my-story__section">
                 <h2 className="my-story__subtitle">Educational Background and Experience</h2>
                 <div className="my-story__image-container">
-                    <img src={senImage} alt="Educational Background" className="my-story__image my-story__image--right" />
+                    <div className="rectangular-image-container">
+                        <img src={steppingStonesImage} alt="Stepping Stones School" />
+                    </div>
                     <p>
-                        My most significant experience to date has been as a teaching assistant at Stepping Stones, a behavioural-based SEN primary school (PRU). At Stepping Stones, I was exposed to the profound impact that psychology can have on children’s learning and behaviour. I worked closely with colleagues to devise individualised interventions for each student based on their Education, Health, and Care Plans (EHCPs). These plans are tailored to the unique challenges faced by each pupil, including those related to behavioural and emotional difficulties.
+                        My most significant experience to date has been as a teaching assistant at Stepping Stones, a behavioural-based SEN primary school (PRU). At Stepping Stones, I was exposed to the profound impact that psychology can have on children's learning and behaviour. I worked closely with colleagues to devise individualised interventions for each student based on their Education, Health, and Care Plans (EHCPs). These plans are tailored to the unique challenges faced by each pupil, including those related to behavioural and emotional difficulties.
                     </p>
                     <p>
                         Working with children at Stepping Stones allowed me to see firsthand the effectiveness of psychological interventions. For instance, I applied Vygotsky's theory of the "more knowledgeable other" when working with a six-year-old boy with PDA (Pathological Demand Avoidance). This boy had come from a family with a long history of illiteracy and had been permanently excluded from mainstream education due to his aggressive and avoidant behaviour. Upon joining us, he initially refused to participate in any lessons and would often respond with physical or verbal aggression. Through firm boundary-setting and consistent positive reinforcement, we gradually built trust with him.
@@ -91,21 +94,24 @@ const MyResearch = () => (
         <FadeInSection>
             <section id="case-study" className="my-story__section">
                 <h2 className="my-story__subtitle">Applying Psychology to my Work</h2>
-                <p>
-                    Understanding that education extends beyond the boundaries of traditional classrooms, I sought to broaden my perspective by immersing myself in various educational environments. This led me to work in a children's home with an onsite school, where I was able to apply Bronfenbrenner’s ecological systems theory to explore how the different layers of a child's environment—from family relationships to societal influences—shape their development.
-                </p>
-                <p>
-                    In this role, I recognised that miscommunications between staff, guardians, and authorities often left children feeling unsupported. I applied humanistic psychology principles, specifically through motivational interviewing (MI) and reflective listening, to foster collaboration among all parties involved. By improving communication, I aimed to provide the children with more consistent and effective care, both at school and at home. This experience reinforced my belief in the importance of a holistic, systemic approach to education, where each aspect of a child's life is considered.
-                </p>
-                <p>
-                    Another powerful example of applying psychological theories came during my work at Springfield SEN Secondary, where I supported Year 10 and 11 students as they prepared for their Duke of Edinburgh expedition. I designed an engaging, student-led activity where learners created their own checklist for the trip, drawing on constructivist principles that encourage knowledge-building through experience. Instead of providing a pre-made list, I facilitated collaborative discussions, asking each student to contribute five essential items for the trip.
-                </p>
-                <p>
-                    Breaking down the task into smaller steps aligned with cognitive load theory, ensuring that the students weren't overwhelmed with information at once. After each round of item selection, we reflected on their choices, fostering critical thinking and teamwork. Through this process, I also applied Vygotsky’s social development theory, allowing students to learn from peer interaction, and Bandura’s social learning theory, as they modelled their behaviour after their peers. This process not only prepared the students for the expedition but also developed essential problem-solving and collaborative skills.
-                </p>
-                <p>
-                    These real-life applications of psychology in education—whether in a classroom, children’s home, or outdoor learning environment—have solidified my understanding of the power of psychological principles in creating positive, lasting change in children's lives.
-                </p>
+                <div className="my-story__image-container">
+                    <img src={senImage} alt="Educational Background" className="my-story__image my-story__image--right" />
+                    <p>
+                        Understanding that education extends beyond the boundaries of traditional classrooms, I sought to broaden my perspective by immersing myself in various educational environments. This led me to work in a children's home with an onsite school, where I was able to apply Bronfenbrenner's ecological systems theory to explore how the different layers of a child's environment—from family relationships to societal influences—shape their development.
+                    </p>
+                    <p>
+                        In this role, I recognised that miscommunications between staff, guardians, and authorities often left children feeling unsupported. I applied humanistic psychology principles, specifically through motivational interviewing (MI) and reflective listening, to foster collaboration among all parties involved. By improving communication, I aimed to provide the children with more consistent and effective care, both at school and at home. This experience reinforced my belief in the importance of a holistic, systemic approach to education, where each aspect of a child's life is considered.
+                    </p>
+                    <p>
+                        Another powerful example of applying psychological theories came during my work at Springfield SEN Secondary, where I supported Year 10 and 11 students as they prepared for their Duke of Edinburgh expedition. I designed an engaging, student-led activity where learners created their own checklist for the trip, drawing on constructivist principles that encourage knowledge-building through experience. Instead of providing a pre-made list, I facilitated collaborative discussions, asking each student to contribute five essential items for the trip.
+                    </p>
+                    <p>
+                        Breaking down the task into smaller steps aligned with cognitive load theory, ensuring that the students weren't overwhelmed with information at once. After each round of item selection, we reflected on their choices, fostering critical thinking and teamwork. Through this process, I also applied Vygotsky’s social development theory, allowing students to learn from peer interaction, and Bandura’s social learning theory, as they modelled their behaviour after their peers. This process not only prepared the students for the expedition but also developed essential problem-solving and collaborative skills.
+                    </p>
+                    <p>
+                        These real-life applications of psychology in education—whether in a classroom, children’s home, or outdoor learning environment—have solidified my understanding of the power of psychological principles in creating positive, lasting change in children's lives.
+                    </p>
+                </div>
             </section>
         </FadeInSection>
 

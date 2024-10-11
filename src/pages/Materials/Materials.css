@@ -50,7 +50,7 @@
 }
 
 .materials__item {
-    background-color: var(--clr-bg-alt);
+    background-color: var(--clr-dark-blue);
     border: 1px solid transparent;
     border-color: var(--clr-primary);
     border-radius: 8px;
